@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "local": ["app/config/metadata.xml"]
+    },
+    "service": {
+        "sp": {
+            "name": "openintervue-sso-test",
+            "endpoints": {
+                "assertion_consumer_service": [
+                    ["https://b941-106-51-163-253.ngrok-free.app/saml/acs", "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"]  
+                ]
+            },
+            "authn_requests_signed": true,
+            "want_assertions_signed": true,
+            "want_response_signed": true
+        }
+    }
+}
