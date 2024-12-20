@@ -3,8 +3,9 @@ from app.routers.saml import router as saml_router
 
 app = FastAPI()
 
-app.include_router(saml_router)
+# Include SAML Router
+app.include_router(saml_router, prefix="/saml")
 
 @app.get("/")
 async def root():
-    return {"message": "hello saml-sso"}
+    return {"message": "Welcome to SAML SSO Integration"}
