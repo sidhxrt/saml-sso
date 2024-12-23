@@ -2,3 +2,5 @@ fastapi
 uvicorn
 pysaml2
 python-jose
+python-multipart
+xmlsec
