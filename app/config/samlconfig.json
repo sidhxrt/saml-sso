@@ -1,0 +1,29 @@
+{
+    "entityid": "https://sid-xq3g.onrender.com/saml/metadata",
+    "metadata": {
+      "remote": [
+        {
+          "url": f"https://login.microsoftonline.com/{PATHID}/federationmetadata/2007-06/federationmetadata.xml?appid={APPID}",
+          "cert": null
+        }
+      ]
+    },
+    "service": {
+        "sp": {
+            "name": "openintervue-test",
+            "endpoints": {
+                "assertion_consumer_service": [
+                    ["https://sid-xq3g.onrender.com/saml/acs", f"{POST}"]
+                ],
+                "single_sign_on_service": [
+                    [f"https://login.microsoftonline.com/{PATHID}/saml2", f"{REDIRECT}"]
+                ]
+            },
+            "authn_requests_signed": false,
+            "want_assertions_signed": true,
+            "want_response_signed": true
+        }
+    }
+}
+
+
