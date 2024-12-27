@@ -1,29 +1,27 @@
 {
-    "entityid": "https://sid-xq3g.onrender.com/saml/metadata",
-    "metadata": {
+  "entityid": "https://sid-xq3g.onrender.com/saml/metadata",
+  "metadata": {
       "remote": [
-        {
-          "url": f"https://login.microsoftonline.com/{PATHID}/federationmetadata/2007-06/federationmetadata.xml?appid={APPID}",
-          "cert": null
-        }
+          {
+              "url": "https://login.microsoftonline.com/9a60dfc5-5e91-4142-b6b7-13c4a320e6ad/federationmetadata/2007-06/federationmetadata.xml?appid=6c3c57b9-2822-42d7-b899-9ece025e8107",
+              "cert": "app/config/idp_cert.pem"
+          }
       ]
-    },
-    "service": {
-        "sp": {
-            "name": "openintervue-test",
-            "endpoints": {
-                "assertion_consumer_service": [
-                    ["https://sid-xq3g.onrender.com/saml/acs", f"{POST}"]
-                ],
-                "single_sign_on_service": [
-                    [f"https://login.microsoftonline.com/{PATHID}/saml2", f"{REDIRECT}"]
-                ]
-            },
-            "authn_requests_signed": false,
-            "want_assertions_signed": true,
-            "want_response_signed": true
-        }
-    }
+  },
+  "service": {
+      "sp": {
+          "name": "snake-python",
+          "endpoints": {
+              "assertion_consumer_service": [
+                  ["https://sid-xq3g.onrender.com/saml/acs", "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"]
+              ],
+              "single_sign_on_service": [
+                  ["https://login.microsoftonline.com/9a60dfc5-5e91-4142-b6b7-13c4a320e6ad/saml2", "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"]
+              ]
+          },
+          "authn_requests_signed": false,
+          "want_assertions_signed": true,
+          "want_response_signed": true
+      }
+  }
 }
-
-
